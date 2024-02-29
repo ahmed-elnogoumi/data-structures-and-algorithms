@@ -46,7 +46,15 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const setState = (arr, obj) => {
-  // Solution code here...
+  let peopleCopy = [...people];
+  let stuffCopy = {...stuff};
+
+  const state = {
+    people: peopleCopy,
+    stuff: stuffCopy
+  }
+
+  return state;
 };
 
 
@@ -67,7 +75,13 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr, obj) => {
-  // Solution code here...
+  let peopleCopy = [...people];
+  let stuffCopy = {...stuff, toothbrush: 'brand new', cars: [...obj.cars, 'Ford'], toys: obj.toys + 1};
+  const state = {
+    people: peopleCopy,
+    stuff: stuffCopy
+  }
+  return state;
 };
 
 
